@@ -31,6 +31,5 @@ public class MyApp3 {
 		Foo foo = new Foo();
 		foo.doIt();
 		LOGGER.info("Exiting application");
-		
 	}
 }
