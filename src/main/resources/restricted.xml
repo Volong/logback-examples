@@ -13,15 +13,11 @@
 		</encoder>
 	</appender>
 	
-<!-- 	<logger name="chapters.configuration.Foo" additivity="false"> -->
-<!-- 		<appender-ref ref="FILE" /> -->
-<!-- 	</logger> -->
-	
-	<logger name="chapters.configuration">
-		<appender-ref ref="STDOUT" />
+	<logger name="chapters.configuration.Foo" additivity="false">
+		<appender-ref ref="FILE" />
 	</logger>
 	
-	<root level="debug"  additivity="false">
+	<root level="debug">
 		<appender-ref ref="STDOUT" />
 	</root>
 </configuration>
