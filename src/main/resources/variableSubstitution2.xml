@@ -1,6 +1,4 @@
 <configuration>
-	<property file="F:\project\logback-examples\src\main\resources\variables1.properties"/>
-	
 	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
 		<file>${USER_HOME}/myApp.log</file>
 		<encoder>
@@ -10,5 +8,5 @@
 	
 	<root level="debug">
 		<appender-ref ref="FILE" />
-	</root>
+	</root>	
 </configuration>
