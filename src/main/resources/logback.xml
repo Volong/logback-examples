@@ -1,14 +1,11 @@
 <configuration>
-	<property file="F:\project\logback-examples\src\main\resources\variables1.properties"/>
-	
-	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
-		<file>${USER_HOME}/myApp.log</file>
-		<encoder>
-			<pattern>%msg%n</pattern>
-		</encoder>
-	</appender>
-	
-	<root level="debug">
-		<appender-ref ref="FILE" />
-	</root>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONTEXT_NAME} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
 </configuration>
