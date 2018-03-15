@@ -6,7 +6,6 @@
 					<pattern>%d %-5level %logger{35} - %msg %n</pattern>
 				</encoder>
 			</appender>
-			
 			<root>
 				<appender-ref ref="CON" />
 			</root>
