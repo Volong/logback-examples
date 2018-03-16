@@ -2,6 +2,8 @@
     <contextName>myAppName</contextName>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
+<!--         	两种配置方式都可以 -->
+<!--             <pattern>%d ${CONTEXT_NAME} [%t] %level %logger{36} - %msg%n</pattern> -->
             <pattern>%d %contextName [%t] %level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>

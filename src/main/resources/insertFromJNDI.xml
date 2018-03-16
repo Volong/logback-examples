@@ -1,3 +1,7 @@
+<!-- appName 的配置在 web.xml 中 
+	使用的是 eclipse 的 jetty 插件运行的
+	运行时候的配置：右键点击项目 -> Run Configurations -> Jetty 选项卡下选择 Show Advanced Options -> 选中 JNDI Support -> 在运行就可以了
+-->
 <configuration>
 	<insertFromJNDI env-entry-name="java:comp/env/appName" as="appName" />
 	<contextName>${appName}</contextName>
