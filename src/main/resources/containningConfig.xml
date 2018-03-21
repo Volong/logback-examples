@@ -1,5 +1,5 @@
 <configuration>
-    <include optional="true" file="src/main/resources/includedConfig.xml" />
+    <include file="src/main/resources/includedConfig.xml" />
     
     <root level="DEBUG">
         <appender-ref ref="includedConsole" />
