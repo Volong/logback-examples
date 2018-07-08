@@ -24,7 +24,9 @@ public class ConfigurationTester {
 		} catch (JoranException je) {
 			je.printStackTrace();
 		}
-
+		
+		String str = "F:\\project\\logback-examples\\src\\main\\resources\\logback-timestamp-contextBirth.xml";
+		
 		logger.debug("**Hello {}", new Bar());
 		MDC.put("testKey", "testValueFromMDC");
 		MDC.put("testKey2", "value2");
