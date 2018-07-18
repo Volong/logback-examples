@@ -1,0 +1,30 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout cass="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%date %-5level [%thread] %logger - %message%n</Pattern>
+        </layout>
+    </appender>
+    
+    <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>rolling.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <FileNamePattern>rolling.i%.log</FileNamePattern>
+            <MinIndex>1</MinIndex>
+            <MaxIndex>3</MaxIndex>
+        </rollingPolicy>
+        
+        <triggerPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>8KB</MaxFileSize>
+        </triggerPolicy>
+        
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%relative %-5level %logger - %message%n</Pattern>
+        </layout>
+    </appender>
+    
+    <root>
+        <level value="debug" />
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ROLLING" />
+    </root>
+</configuration>

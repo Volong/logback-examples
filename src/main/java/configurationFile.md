@@ -10,4 +10,4 @@ java -Dlogback.configurationFile=sample0.xml -cp ".;slf4j-api-1.8.0-beta1.jar;lo
 
 
 
-把所需要的文件以及 jar 包放在与 `chapters` 同级的目录下，或者指定具体的文件夹
+把所需要的文件以及 jar 包放在与 `chapters` 同级的 classpath 目录下，或者指定具体的文件夹
