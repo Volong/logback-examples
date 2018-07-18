@@ -1,3 +1,3 @@
 # logback-examples
 
-[logback 中文手册](https://volong.github.io/2018/02/06/logback/)中的例子
+[logback 中文手册](https://github.com/Volong/logback-chinese-manual)中的例子

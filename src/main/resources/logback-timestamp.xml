@@ -1,0 +1,18 @@
+<configuration>
+<!-- 	通过 "bySecond" 将时间格式化成 "yyyyMMdd'T'HHmmss" 的形式插入到 logger 的上下文中 
+		这个值对后续的配置也适用
+-->
+	<timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmmss" />
+	
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+<!-- 		利用之前创建的 timestamp 来创建唯一的文件 -->
+		<file>log-${bySecond}.txt</file>
+		<encoder>
+			<pattern>%logger{35} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="DEBUG">
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>
