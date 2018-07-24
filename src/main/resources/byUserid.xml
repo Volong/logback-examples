@@ -1,0 +1,28 @@
+<configuration>
+	
+	<property name="FILE_NAME" value="FILE" />
+
+	<appender name="SIFT"
+		class="ch.qos.logback.classic.sift.SiftingAppender">
+		<!-- 在缺少 class 属性的情况下，默认的 discriminator 类型为 ch.qos.logback.classic.sift.MDCBasedDiscriminator -->
+		<discriminator>
+			<key>userid</key>
+			<defaultValue>unknown</defaultValue>
+		</discriminator>
+		<sift>
+			<property name="FILE_NAME1" value="FILE1" />
+			<appender name="FILE-${userid}"
+				class="ch.qos.logback.core.FileAppender">
+				<file>${userid}_${FILE_NAME}_${FILE_NAME1}.log</file>
+				<append>false</append>
+				<layout class="ch.qos.logback.classic.PatternLayout">
+					<pattern>%d [%thread] %level %mdc %logger{35} - %msg%n</pattern>
+				</layout>
+			</appender>
+		</sift>
+	</appender>
+
+	<root level="DEBUG">
+		<appender-ref ref="SIFT" />
+	</root>
+</configuration>
