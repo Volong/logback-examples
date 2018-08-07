@@ -1,0 +1,15 @@
+<configuration debug="true">
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+<!-- 	          在 Windows 平台下，设置 withJansi = true 来开启 ANSI 颜色代码需要 Jansi 类库 -->
+<!-- 	          需要在 classpath 引入 org.fusesource.jansi:jansi:1.8 包 -->
+<!-- 	          在基于 Unix 操作系统，像 Linux 以及 Mac OS X 系统默认支持 ANSI 颜色代码 -->
+		<withJansi>true</withJansi>
+		<encoder>
+			<pattern>[%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg %n</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
