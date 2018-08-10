@@ -1,17 +1,16 @@
 <configuration debug="true">
-    <evaluator name="DISP_CALLER_EVAL">
-        <expression>
-            logger.contains("chapters.layouts") &amp;&amp; message.contains("who calls thee")
-        </expression>
-    </evaluator>
-    
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%-4relative [%thread] %-5level - %msg%n%caller{2, DISP_CALLER_EVAL}</pattern>
-        </encoder>
-    </appender>
-    
-    <root level="DEBUG">
-        <appender-ref ref="STDOUT" />
-    </root>
+
+	<evaluator name="DISPLAY_EX_EVAL">
+		<expression>throwable != null &amp;&amp; throwable instanceof chapters.layouts.TestException</expression>
+	</evaluator>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%msg%n%xEx{full, DISPLAY_EX_EVAL}</pattern>
+		</encoder>
+	</appender>
+
+	<root level="debug">
+		<appender-ref ref="STDOUT" />
+	</root>
 </configuration>
