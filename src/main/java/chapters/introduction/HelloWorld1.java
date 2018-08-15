@@ -8,5 +8,6 @@ public class HelloWorld1 {
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger("chapters.introduction.HelloWorld1");
         logger.debug("hello world");
+        logger.debug("sample");
     }
 }
