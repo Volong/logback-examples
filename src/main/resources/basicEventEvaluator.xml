@@ -7,5 +7,8 @@
 			<OnMismatch>NEUTRAL</OnMismatch>
 			<OnMatch>DEBY</OnMatch>
 		</filter>
+		<encoder>
+			<pattern>%-4relative [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
 	</appdener>
 </configuration>
