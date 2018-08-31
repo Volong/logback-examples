@@ -1,0 +1,7 @@
+<computation name="toto">
+	<literal value="7" />
+	<literal value="3" />
+	<add />
+	<literal value="3" />
+	<multiply />
+</computation>
