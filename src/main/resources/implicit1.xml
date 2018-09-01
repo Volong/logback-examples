@@ -1,0 +1,10 @@
+<foo>
+	<xyz printme="true">
+		<abc printme="true" />
+	</xyz>
+
+	<xyz />
+
+	<foo printme="true" />
+
+</foo>
