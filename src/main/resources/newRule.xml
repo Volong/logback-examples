@@ -1,0 +1,16 @@
+<computation name="toto">
+	<newRule pattern="*/computation/literal" actionClass="chapters.joran.LiteralAction" />
+	
+	<newRule pattern="*/computation/add" actionClass="chapters.joran.AddAction" />
+	
+	<newRule pattern="*/computation/multiply" actionClass="chapters.joran.MultiplyAction" />
+	
+<!-- 	<computation> -->
+		<literal value="7" />
+		<literal value="3" />
+		<add />
+<!-- 	</computation> -->
+	
+	<literal value="3"/>
+  	<multiply/>
+</computation>

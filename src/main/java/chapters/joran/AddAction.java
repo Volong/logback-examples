@@ -14,7 +14,6 @@ public class AddAction extends Action {
     public void begin(InterpretationContext ic, String name, Attributes attributes) throws ActionException {
         int first = fetchInteger(ic);
         int second = fetchInteger(ic);
-        
         ic.pushObject(first + second);
     }
 
